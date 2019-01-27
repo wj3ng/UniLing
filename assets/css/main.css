@@ -72,6 +72,16 @@ input, select, textarea {
 	appearance: none;
 }
 
+/* MY CUSTOM STYLES */
+
+
+#google-doc-iframe{
+	left: 0;
+	top: 0;
+	border: 0;
+	width: 100%;
+}
+
 /* Basic */
 
 	@-ms-viewport {
