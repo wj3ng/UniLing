@@ -12,8 +12,11 @@ if(!page) page = 1;
 var tmpStr = "";
 var firstPage = 1;
 var lastPage = Math.max(1,Math.floor((announcements.length-1)/10+1));
+if(page > lastPage) page = lastPage;
 
 for(var i=(page-1)*10; i<Math.min(page*10,announcements.length); i++) tmpStr += announcements[i];
+
+if(tmpStr == "") tmpStr = "<p>Nothing to show here.</p>";
 
 $("#announcements").html(tmpStr);
 $("#pageIndicator").html("Page " + page + " of " + lastPage);
